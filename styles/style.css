@@ -1,0 +1,20 @@
+.typewriter {
+    margin: 30px 5px 10px 5px;
+    text-align: center;
+    font-style: italic;
+    font-style: italic;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+  .author {
+    font-style: normal;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
