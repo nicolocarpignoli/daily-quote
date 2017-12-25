@@ -17,6 +17,10 @@ class App extends React.Component {
         this.props.dispatch(quotes.getQuoteOfTheDay());
     }
 
+    translate() {
+        this.props.dispatch(quotes.translate(this.state.quote, this.props.currentLanguage));
+    }
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.quote != null) {
             this.setState({
@@ -27,13 +31,15 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='container'>
+                <div className='appname'> Dailyquote </div>
                 <div className='typewriter'>
                     <h1> {this.state.quote && this.state.quote.quote} </h1>
                 </div>
                 <div>
-                    <h2 className='typewriter author'> {this.state.quote && this.state.quote.author} </h2>
+                    <h2 className='author'> {this.state.quote && this.state.quote.author} </h2>
                 </div>
+                <button className='translate author' onClick={this.translate.bind(this)}> Translate </button>
             </div>
     )}
 }
@@ -41,5 +47,6 @@ class App extends React.Component {
 export default connect(store => {
     return {
         quote: store.quotes.quote,
+        currentLanguage: store.quotes.currentLanguage,
     }
 })(App);

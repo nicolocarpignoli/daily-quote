@@ -1,20 +1,47 @@
-.typewriter {
-    margin: 30px 5px 10px 5px;
-    text-align: center;
-    font-style: italic;
-    font-style: italic;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+body {
+  background-color: #fcf3e7;
 }
 
-  .author {
-    font-style: normal;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
+.container {
+  margin-top: 25px;
+}
+
+.appname {
+  margin: 8px;
+  font-family: serif;
+  text-align: center;
+  color: #bc1616;
+}
+
+.typewriter {
+  margin-top: 130px;
+  font-family: cursive;
+  text-align: center;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.author {
+  text-align: center;
+  margin-top: 60px;
+  font-weight: normal;
+  font-size: x-large;
+  font-family: serif;
+  color:#bc1616;
+}
+
+.translate {
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 0;
+  border: none;
+  background: none;
+}
