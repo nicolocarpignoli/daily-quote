@@ -29,7 +29,6 @@ if(!window.device){
 
 ons.ready(() => {
   const rootElement = document.getElementById('root')
-  console.log('root', rootElement);
   ReactDOM.render(
     <Provider store={store}>
       <App />

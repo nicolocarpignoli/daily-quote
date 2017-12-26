@@ -22,7 +22,8 @@ class App extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.quote != null) {
+        console.log(this.props, nextProps)
+        if (nextProps.quote != null || (this.props.quote.quote != nextProps.quote.quote)) {
             this.setState({
                 quote: nextProps.quote,
             });
@@ -32,14 +33,20 @@ class App extends React.Component {
     render() {
         return (
             <div className='container'>
-                <div className='appname'> Dailyquote </div>
-                <div className='typewriter'>
-                    <h1> {this.state.quote && this.state.quote.quote} </h1>
-                </div>
+                <div className='tiny'> Dailyquote </div>
+                { this.state.quote ? 
+                    <div className='typewriter'>
+                        <h1> {this.state.quote && this.state.quote.quote} </h1>
+                    </div>
+                : <div className='typewriter'> Loading </div>
+                } 
                 <div>
                     <h2 className='author'> {this.state.quote && this.state.quote.author} </h2>
                 </div>
-                <button className='translate author' onClick={this.translate.bind(this)}> Translate </button>
+                <button className='translate' onClick={this.translate.bind(this)}> 
+                    {this.props.currentLanguage == 'en' ? 'Leggi in Italiano' : 'Read in English'} 
+                </button>
+                <div className='tiny'> Translations are courtesy of Yandex™ </div>
             </div>
     )}
 }

@@ -9,7 +9,6 @@ export function getQuoteOfTheDay() {
         .then(res => {
           let quote = {
               quote: 'Ops, this is embarassing.',
-              author: 'Me',
             };
           if(res && res.contents && res.contents.quotes && res.contents.quotes[0]) {
             quote = {
@@ -24,7 +23,7 @@ export function getQuoteOfTheDay() {
 
 export function translate(quote, actualLanguage) {
   let lang = 'it';
-  if (actualLanguage == 'it') {
+  if (actualLanguage == lang) {
     return function(dispatch) { 
       dispatch({ type: "TRANSLATE", payload: null});
     }

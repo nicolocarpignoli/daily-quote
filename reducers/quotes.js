@@ -24,6 +24,7 @@ export default function reducer(state = defaultState, action) {
           newState.currentLanguage = 'en';
           newState.quote = state.originalQuote;
         }
+        return newState;
       }
       default:
         return state;
