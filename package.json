@@ -1,5 +1,5 @@
 {
-  "name": "react-onsenui-redux-weather",
+  "name": "nicolocarpignoli-dailyquote",
   "version": "1.0.0",
   "description": "Get your daily inspiration quote.",
   "main": "index.js",
@@ -8,16 +8,8 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "deploy": "npm run build && git commit www -m \"Deploy\" && git subtree push --prefix www origin gh-pages"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/argelius/react-onsenui-redux-weather.git"
-  },
   "author": "Nicolò Carpignoli",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/argelius/react-onsenui-redux-weather/issues"
-  },
-  "homepage": "https://github.com/argelius/react-onsenui-redux-weather#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.1",
     "babel-core": "^6.18.0",
