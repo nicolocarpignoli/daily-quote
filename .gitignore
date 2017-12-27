@@ -1,6 +1,7 @@
 node_modules/*
 www/*
 platforms/*
-res/
+res/*
+.idea/*
 icons/*
 plugins/*
