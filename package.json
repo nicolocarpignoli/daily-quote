@@ -1,5 +1,5 @@
 {
-  "name": "nicolocarpignoli-dailyquote",
+  "name": "nicolocarpignoli.dailyquote",
   "version": "1.0.0",
   "description": "Get your daily inspiration quote.",
   "main": "index.js",
@@ -41,8 +41,6 @@
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.1.0",
     "style-loader": "^0.13.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^2.3.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"

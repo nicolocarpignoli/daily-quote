@@ -1,10 +1,9 @@
-import {applyMiddleware, createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk"
 import promise from "redux-promise-middleware"
 import reducer from "../reducers/index.js"
 
 const middleware = applyMiddleware(promise(), thunk);
-
 const store = handleStoreCreation();
 
 function handleStoreCreation() {
