@@ -2,6 +2,10 @@
 
 <img src="https://image.ibb.co/hF7oc6/26108090_542420042795819_22998366_o.png" width="300">
 
+Free Android version <a href="http://nicolocarpignoli/downloads/dailyquote.apk"> Download link </a>
+
+This project is released under MIT license as you can check in LICENSE.md file.
+
 Dailyquote mobile app is a simple app that shows you the inspiration quote of the day.
 Open it every day to freely read your inspiration quote. 
 
