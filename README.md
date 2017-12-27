@@ -9,10 +9,14 @@ It's also possible to translate it in different language (Italian at the moment)
 
 Translations are courtesy of [Yandex](www.Yandex.com).
 
-# Technical details
+### Technology
 
 Built with Cordova, ionic and ReactJS.
 
-# License
+### How can I contribute?
 
-MIT license.
+In the [Issue](https://github.com/nicolocarpignoli/daily-quote/issues) section of this repository I constantly add bugs to fix or new features to develop. You can fork this repository and start develop as a contributor.
+
+### License
+
+This project is released under MIT license as you can check in LICENSE.md file.
