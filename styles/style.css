@@ -44,7 +44,7 @@ body {
 }
 
 .typewriter {
-  margin: 130px 20px 20px 15px;
+  margin: 50px 20px 20px 15px;
   font-family: cursive;
   text-align: center;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */

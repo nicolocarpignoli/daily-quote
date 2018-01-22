@@ -2,6 +2,7 @@ const defaultState = {
   quote: null,
   currentLanguage: 'en',
   originalQuote: null,
+  languages: [],
 };
 
 export default function reducer(state = defaultState, action) {
@@ -16,14 +17,13 @@ export default function reducer(state = defaultState, action) {
         newState.currentLanguage = 'en';
         return newState;
       }
+      case "LANGUAGES_GET": {
+        newState.languages = newState.response;
+        return newState;
+      }
       case "TRANSLATE": {
-        if (state.currentLanguage == 'en') {
-          newState.currentLanguage = 'it';
-          newState.quote = newState.response;
-        } else {
-          newState.currentLanguage = 'en';
-          newState.quote = state.originalQuote;
-        }
+        newState.currentLanguage = newState.response.currentLanguage;
+        newState.quote = newState.response.quote;
         return newState;
       }
       default:
