@@ -4,8 +4,6 @@
 
 Free Android version <a href="http://nicolocarpignoli/downloads/dailyquote.apk"> Download link </a>
 
-This project is released under MIT license as you can check in LICENSE.md file.
-
 Dailyquote mobile app is a simple app that shows you the inspiration quote of the day.
 Open it every day to freely read your inspiration quote. 
 
