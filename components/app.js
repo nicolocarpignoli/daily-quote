@@ -15,10 +15,7 @@ class App extends React.Component {
 
     componentDidMount() {
         this.props.dispatch(quotes.getQuoteOfTheDay());
-    }
-
-    translate() {
-        this.props.dispatch(quotes.translate(this.state.quote, this.props.currentLanguage));
+        this.props.dispatch(quotes.getLanguages());
     }
 
     componentWillReceiveProps(nextProps) {
@@ -42,9 +39,20 @@ class App extends React.Component {
                 <div>
                     <h2 className='author'> {this.state.quote && this.state.quote.author} </h2>
                 </div>
-                <button className='translate' onClick={this.translate.bind(this)}> 
-                    {this.props.currentLanguage == 'en' ? 'Leggi in Italiano' : 'Read in English'} 
-                </button>
+                    <div className='translate'>
+                        Read in other language 
+                    </div>
+                    <div className='translate'>
+                        <select className='translate-select' id="select-language" 
+                            onChange={(event) => this.props.dispatch(quotes.translate(this.state.quote, event.target.value, this.props.currentLanguage))}>
+                            <option value={null} selected> Select a language </option>
+                            {                            
+                                this.props.languages && this.props.languages.map((obj) => {
+                                    return <option value={obj.key}> {obj.language} </option>
+                                })
+                            }
+                        </select>
+                    </div>
                 <div className='tiny'> Translations are courtesy of Yandex™ </div>
             </div>
     )}
@@ -54,5 +62,6 @@ export default connect(store => {
     return {
         quote: store.quotes.quote,
         currentLanguage: store.quotes.currentLanguage,
+        languages: store.quotes.languages,
     }
 })(App);

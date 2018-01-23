@@ -43,8 +43,18 @@ body {
   background: none;
 }
 
+.translate-select {
+  border: 0px;
+  text-align-last: center;
+  background-color: #bc1616;
+  font-family: serif;
+  color: #fcf3e7;
+  font-weight: bold;
+
+}
+
 .typewriter {
-  margin: 130px 20px 20px 15px;
+  margin: 50px 20px 20px 15px;
   font-family: cursive;
   text-align: center;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
