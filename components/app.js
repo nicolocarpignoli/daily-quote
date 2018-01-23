@@ -18,15 +18,6 @@ class App extends React.Component {
         this.props.dispatch(quotes.getLanguages());
     }
 
-    onLanguageChange(value) {
-        console.log('value from event', value);
-        this.translate(value);
-    }
-
-    translate(language) {
-        this.props.dispatch(quotes.translate(this.state.quote, language, this.props.currentLanguage));
-    }
-
     componentWillReceiveProps(nextProps) {
         if (nextProps.quote != null || (this.props.quote.quote != nextProps.quote.quote)) {
             this.setState({
@@ -48,16 +39,20 @@ class App extends React.Component {
                 <div>
                     <h2 className='author'> {this.state.quote && this.state.quote.author} </h2>
                 </div>
-                <button className='translate' onClick={this.translate.bind(this)}> 
-                    Read in other language 
-                    <select id="select-language" onChange={this.onLanguageChange.bind(this)}>
-                        {
-                            this.languages && this.languages.map((language) => {
-                                <option value={language}> {language} </option>
-                            })
-                        }
-                    </select>
-                </button>
+                    <div className='translate'>
+                        Read in other language 
+                    </div>
+                    <div className='translate'>
+                        <select className='translate-select' id="select-language" 
+                            onChange={(event) => this.props.dispatch(quotes.translate(this.state.quote, event.target.value, this.props.currentLanguage))}>
+                            <option value={null} selected> Select a language </option>
+                            {                            
+                                this.props.languages && this.props.languages.map((obj) => {
+                                    return <option value={obj.key}> {obj.language} </option>
+                                })
+                            }
+                        </select>
+                    </div>
                 <div className='tiny'> Translations are courtesy of Yandex™ </div>
             </div>
     )}
