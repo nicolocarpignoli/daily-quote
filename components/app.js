@@ -19,7 +19,8 @@ class App extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.quote != null || (this.props.quote.quote != nextProps.quote.quote)) {
+        if (nextProps.quote != null || 
+                (this.props.quote && nextProps.quote && this.props.quote.quote != nextProps.quote.quote)) {
             this.setState({
                 quote: nextProps.quote,
             });

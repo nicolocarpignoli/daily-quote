@@ -21,7 +21,7 @@ body {
 
 .author {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 50px;
   font-weight: normal;
   font-size: x-large;
@@ -31,7 +31,7 @@ body {
 
 .translate {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 60px;
   font-size: x-large;
   font-family: serif;
   color:#bc1616;
@@ -54,7 +54,7 @@ body {
 }
 
 .typewriter {
-  margin: 50px 20px 20px 15px;
+  margin: 30px 20px 20px 15px;
   font-family: cursive;
   text-align: center;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
