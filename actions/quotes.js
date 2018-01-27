@@ -6,7 +6,8 @@ export function getLanguages() {
   return function(dispatch) {
       fetch(endpoint)
         .then(res => res.json())
-        .then(res => {
+        .then(res => {  
+          // sort languages
           let languages = [];
           Object.keys(res.langs).map((elem) => {
             languages.push(res.langs[elem]);
@@ -32,7 +33,7 @@ export function getQuoteOfTheDay() {
         .then(res => res.json())
         .then(res => {
           let quote = {
-              quote: 'Ops, this is embarassing.',
+              quote: 'Ops, this is embarassing, it looks like an error.',
             };
           if(res && res.contents && res.contents.quotes && res.contents.quotes[0]) {
             quote = {

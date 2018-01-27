@@ -19,8 +19,7 @@ class App extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.quote != null || 
-                (this.props.quote && nextProps.quote && this.props.quote.quote != nextProps.quote.quote)) {
+        if (nextProps.quote != null || (this.props.quote && nextProps.quote && this.props.quote.quote != nextProps.quote.quote)) {
             this.setState({
                 quote: nextProps.quote,
             });
@@ -45,7 +44,7 @@ class App extends React.Component {
                     </div>
                     <div className='translate'>
                         <select className='translate-select' id="select-language" 
-                            onChange={(event) => this.props.dispatch(quotes.translate(this.state.quote, event.target.value, this.props.currentLanguage))}>
+                            onChange={(event) => this.props.dispatch(quotes.translate(this.state.quote, event.target && event.target.value, this.props.currentLanguage))}>
                             <option value={null} selected> Select a language </option>
                             {                            
                                 this.props.languages && this.props.languages.map((obj) => {
