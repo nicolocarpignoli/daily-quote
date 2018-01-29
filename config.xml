@@ -28,5 +28,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <hook src="scripts/build.sh" type="before_prepare" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.1" />
     <engine name="android" spec="^7.0.0" />
 </widget>

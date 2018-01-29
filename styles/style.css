@@ -12,6 +12,15 @@ body {
   margin: 40px 20px;
 }
 
+.share {
+  height: 30px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  outline:none;
+}
+
 .tiny {
   margin: 8px;
   font-family: serif;

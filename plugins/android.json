@@ -9,7 +9,14 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "nicolocarpignoli.dailyquote"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "nicolocarpignoli.dailyquote"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "nicolocarpignoli.dailyquote"
+    }
+  }
 }

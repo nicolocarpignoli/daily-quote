@@ -30,6 +30,9 @@ class App extends React.Component {
         return (
             <div className='container'>
                 <div className='tiny'> Dailyquote </div>
+                <button className='share'>
+                    <img className='share' src='http://nicolocarpignoli.com/downloads/share-button.png'/>
+                </button>
                 { this.state.quote ? 
                     <div className='typewriter'>
                         <h1> {this.state.quote && this.state.quote.quote} </h1>
