@@ -26,21 +26,43 @@ class App extends React.Component {
         }
     }
 
+    onShare() {
+        navigator.screenshot.URI((error,res) => {
+            if (error) {
+                console.error(error);
+            } else {
+                if (res && res.URI) {
+                    const options = {
+                        files: [res.URI],
+                        chooserTitle: 'Choose an app',
+                    };
+                    window.plugins.socialsharing.shareWithOptions(options, () => { console.log('Share success')},  (err) => {console.log('Share error ' + err)});
+                }
+        
+            }
+          }, 100);
+
+        
+    }
+
     render() {
         return (
             <div className='container'>
-                <div className='tiny'> Dailyquote </div>
-                <button className='share'>
-                    <img className='share' src='http://nicolocarpignoli.com/downloads/share-button.png'/>
-                </button>
+                    <div className='header'> 
+                        <div className='header-tiny'> Dailyquote </div>
+                        <button className='header-share' onClick={this.onShare.bind(this)}>
+                            <img className='header-share' src='http://nicolocarpignoli.com/downloads/share-button.png'/>
+                        </button>
+                    </div>
+                
                 { this.state.quote ? 
                     <div className='typewriter'>
-                        <h1> {this.state.quote && this.state.quote.quote} </h1>
+                        {this.state.quote && this.state.quote.quote}
                     </div>
                 : <div className='typewriter'> Loading </div>
                 } 
                 <div>
-                    <h2 className='author'> {this.state.quote && this.state.quote.author} </h2>
+                    <div className='author'> {this.state.quote && this.state.quote.author} </div>
                 </div>
                     <div className='translate'>
                         Read in other language 

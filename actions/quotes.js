@@ -48,7 +48,8 @@ export function getQuoteOfTheDay() {
 
 export function translate(quote, language, currentLanguage) {
   if (language != currentLanguage) {
-    const request = `https://translate.yandex.net/api/v1.5/tr.json/translate?lang=${language}&key=${api.apiKey}&text=${quote.quote}`;
+    const escapedQuote = escape(quote.quote);
+    const request = `https://translate.yandex.net/api/v1.5/tr.json/translate?lang=${language}&key=${api.apiKey}&text=${escapedQuote}`;
     return function(dispatch) {
       fetch(request)
           .then(res => res.json())

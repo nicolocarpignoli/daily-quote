@@ -29,5 +29,6 @@
     </platform>
     <hook src="scripts/build.sh" type="before_prepare" />
     <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.1" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="https://github.com/gitawego/cordova-screenshot.git" />
     <engine name="android" spec="^7.0.0" />
 </widget>

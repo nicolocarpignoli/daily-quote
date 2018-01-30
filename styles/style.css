@@ -12,7 +12,7 @@ body {
   margin: 40px 20px;
 }
 
-.share {
+.header-share {
   height: 30px;
   background-color: Transparent;
   background-repeat:no-repeat;
@@ -21,11 +21,24 @@ body {
   outline:none;
 }
 
-.tiny {
-  margin: 8px;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.header-tiny {
   font-family: serif;
   text-align: center;
   color: #bc1616;
+  font-size: 15px;
+}
+
+.tiny {
+  font-family: serif;
+  text-align: center;
+  color: #bc1616;
+  font-size: 15px;
 }
 
 .author {
@@ -33,7 +46,7 @@ body {
   margin-top: 30px;
   margin-bottom: 50px;
   font-weight: normal;
-  font-size: x-large;
+  font-size: 20px;
   font-family: serif;
   color:#bc1616;
 }
@@ -41,10 +54,10 @@ body {
 .translate {
   text-align: center;
   margin-top: 60px;
-  font-size: x-large;
+  font-size: 15px;
   font-family: serif;
   color:#bc1616;
-  margin: 0 auto;
+  margin: 12px;
   display: inherit;
   font-weight: bold;
   padding: 0;
@@ -63,7 +76,8 @@ body {
 }
 
 .typewriter {
-  margin: 30px 20px 20px 15px;
+  font-size: 30px;
+  margin: 40px 20px 20px 15px;
   font-family: cursive;
   text-align: center;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
