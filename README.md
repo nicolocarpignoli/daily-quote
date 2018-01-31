@@ -7,7 +7,7 @@ Free Android version <a href="http://nicolocarpignoli/downloads/dailyquote.apk">
 Dailyquote mobile app is a simple app that shows you the inspiration quote of the day.
 Open it every day to freely read your inspiration quote. 
 
-It's also possible share quote and translate it in almost every language.
+It's also possible to share quote and translate it in almost every language.
 
 Translations are courtesy of [Yandex](www.Yandex.com).
 
