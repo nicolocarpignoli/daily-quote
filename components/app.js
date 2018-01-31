@@ -50,9 +50,7 @@ class App extends React.Component {
             <div className='container'>
                     <div className='header'> 
                         <div className='header-tiny'> Dailyquote </div>
-                        <button className='header-share' onClick={this.onShare.bind(this)}>
-                            <img className='header-share' src='http://nicolocarpignoli.com/downloads/share-button.png'/>
-                        </button>
+                        <img className='header-share' onClick={this.onShare.bind(this)} src='http://nicolocarpignoli.com/downloads/share-button.png'/>
                     </div>
                 
                 { this.state.quote ? 
