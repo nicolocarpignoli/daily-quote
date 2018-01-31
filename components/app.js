@@ -67,7 +67,7 @@ class App extends React.Component {
                     </div>
                     <div className='translate'>
                         <select className='translate-select' id="select-language" 
-                            onChange={(event) => this.props.dispatch(quotes.translate(this.state.quote, event.target && event.target.value, this.props.currentLanguage))}>
+                            onChange={(event) => this.props.dispatch(quotes.translate(this.props.originalQuote || this.state.quote, event.target && event.target.value, this.props.currentLanguage))}>
                             <option value={null} selected> Select a language </option>
                             {                            
                                 this.props.languages && this.props.languages.map((obj) => {
@@ -86,5 +86,6 @@ export default connect(store => {
         quote: store.quotes.quote,
         currentLanguage: store.quotes.currentLanguage,
         languages: store.quotes.languages,
+        originalQuote: store.quotes.originalQuote,
     }
 })(App);
