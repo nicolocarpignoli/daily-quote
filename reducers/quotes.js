@@ -13,7 +13,9 @@ export default function reducer(state = defaultState, action) {
   switch (action.type) {
       case "QUOTE_GET": {
         newState.quote = newState.response;
-        newState.originalQuote = newState.response;
+        if (!newState.originalQuote) {
+          newState.originalQuote = newState.response;
+        } 
         newState.currentLanguage = 'en';
         return newState;
       }
